@@ -17,66 +17,40 @@
             color: #fff;
             overflow-x: hidden;
         }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: Auto;
-            height: Auto;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            text-align: left;
-            color: white;
-            padding: 50px;
-        }
-        header {
-            position: absolute;
-            top: 5%;
-            width: auto;
-            display: flex;
-            align-items: center;
-            padding: 0 40px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            margin-right: 20px;
-        }
 
-        .scrolling-message {
-            position: absolute;
-            top: 90px;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            color: #ffcc00;
-            font-size: 18px;
-            font-weight: bold;
+        .overlay {
+            padding: 20px;
             text-align: center;
         }
 
-        .scrolling-message span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scrollText 15s linear infinite;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-        @keyframes scrollText {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            margin-left: auto;
         }
 
         nav ul li {
@@ -86,7 +60,7 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             transition: color 0.3s;
         }
 
@@ -94,63 +68,45 @@
             color: #00bcd4;
         }
 
+        .scrolling-message {
+            margin-top: 70px;
+            color: #ffcc00;
+            font-size: 16px;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
         .container {
-            width: auto;
-            margin: auto;
-            padding: 30px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            max-width: auto;
-            color: white;
-            margin-top: 5%;
+            padding: 20px;
+            margin-top: 50px;
         }
 
         .section {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-
-        .section:hover {
-            transform: scale(1.02);
+            text-align: left;
         }
 
         .section img {
             width: 45%;
+            height: auto;
             border-radius: 10px;
         }
 
         .section .text {
             width: 50%;
-            padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
         }
 
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        h2 {
-            color: #00bcd4;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        /* Vision & Mission Section */
         .vision-mission {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
         }
@@ -159,39 +115,58 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             width: 48%;
             text-align: center;
-            transition: transform 0.3s ease-in-out;
-            margin-bottom: 5%;
-        }
-
-        .vision-mission .box:hover {
-            transform: scale(1.05);
         }
 
         .vision-mission img {
             width: 100%;
-            height: 40%;
+            height: auto;
             border-radius: 10px;
-            margin-bottom: Auto;
-        }
-        .highlight {
-            color: #00bcd4;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                text-align: center;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .section .text {
+                width: 100%;
+            }
+            .vision-mission {
+                flex-direction: column;
+            }
+            .vision-mission .box {
+                width: 100%;
+            }
         }
-
     </style>
 </head>
 <body>
     <div class="overlay">
         <header>
             <h1 class="logo">KCET-Semiconductor Club</h1>
+            <div class="menu-toggle">☰</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -202,42 +177,34 @@
             </nav>
         </header>
         <div class="scrolling-message">
-            <span>Welcome to KCET Semiconductor Club! Stay tuned for upcoming events and innovations.</span>
+            <marquee>Welcome to KCET Semiconductor Club! Stay tuned for upcoming events and innovations.</marquee>
         </div>
-    <div class="container">
-        <!-- Introduction Section -->
-        <div class="section">
-            <img src="Intro.jpg" alt="Introduction">
-            <div class="text">
-                <h2>Purpose</h2>
-                <p>Our club is dedicated to enhancing knowledge and expertise in the <b class="highlight">semiconductor domain</b> 
-                    through various engaging activities, including invited talks, webinars, demo sessions, problem-solving events, workshops, 
-                    and hands-on training. We collaborate with leading industries, premier institutes, and esteemed organizations to ensure 
-                    aximum exposure to the latest advancements and trends in the semiconductor field. 
-                    This initiative is closely aligned with the <b class="highlight">"India Semiconductor Mission"</b> vision, 
-                    contributing to the nation's goal of becoming a global hub for semiconductor design and manufacturing</p>
+        <div class="container">
+            <div class="section">
+                <img src="intro.jpg" alt="Introduction">
+                <div class="text">
+                    <h2>Purpose</h2>
+                    <p>Our club enhances knowledge in the <b>semiconductor domain</b> through activities like talks, webinars, and workshops.</p>
+                </div>
             </div>
-        </div>
-
-        <!-- Vision & Mission Section -->
-        <div class="vision-mission">
-            <div class="box">
-                <img src="Vision.jpg" alt="Vision">
-                <h2>Vision</h2>
-                <p>To nurture a community of innovators and industry-ready professionals by fostering in-depth 
-                    knowledge and hands-on expertise in the semiconductor domain, empowering students to contribute to 
-                    cutting-edge advancements in technology, research, and development, while aligning with the national 
-                    vision of the <b class="highlight">"India Semiconductor Mission"</b>.</p>
-            </div>
-            <div class="box">
-                <img src="Mission.jpg" alt="Mission">
-                <h2>Mission</h2>
-                <p><b class="highlight">Promote Industry-Academia Collaboration: </b>Organize webinars, workshops, and hands-on sessions with industry experts and academic leaders to bridge the gap between theoretical knowledge and industry practices.</p>
-                <p><b class="highlight">Foster Innovation and Research: </b>Encourage students to work on real-time projects, participate in technical competitions, and develop problem-solving skills in the semiconductor domain.</p>
-                <p><b class="highlight">Empower with Practical Skills: </b>Provide technical training, certifications, and exposure to advanced semiconductor technologies, aligning with the "India Semiconductor Mission" to contribute to national technological advancement.</p>
-                    
+            <div class="vision-mission">
+                <div class="box" style="order: 2;">
+                    <img src="Vision.jpg" alt="Vision">
+                    <h2>Vision</h2>
+                    <p>To nurture industry-ready professionals and contribute to semiconductor innovations.</p>
+                </div>
+                <div class="box" style="order: 1;">
+                    <img src="Mission.jpg" alt="Mission">
+                    <h2>Mission</h2>
+                    <p>We promote industry-academia collaboration and encourage innovation in semiconductor technologies.</p>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector("nav ul").classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
