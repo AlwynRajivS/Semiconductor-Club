@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Image Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to right, #191f29, #1f2429);
+            color: white;
+        }
+        .navbar {
+            background: black;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        .header {
+            background: #1c1c1c;
+            padding: 20px;
+            color: #64b5f6;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .image-box {
+            width: 300px;
+            height: 350px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.5s, box-shadow 0.5s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .image-box img {
+             width: 250px;  /* Set a fixed width */
+            height: 250px; /* Set a fixed height */
+            object-fit: cover; /* Ensures images fill the box while maintaining aspect ratio */
+            border-radius: 10px;
+            }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .designation {
+            font-size: 16px;
+            color: #ffcc00;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .image-box {
+                width: 90%;
+                height: auto;
+            }
+            .image-box:first-child {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>KCET-Semiconductor Club</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="Activity.html">Activity</a>
+            <a href="Achievement">Achievement</a>
+        </div>
+    </div>
+    
+    <div class="header">Club Office Bearers</div>  
+    <div class="header">Faculty Members</div>
+    <div class="container">
+        <div class="image-box">
+            <img src="Convener.jpg" alt="Convener">
+            <div class="name">Dr. R. Suresh Babu</div>
+            <div class="designation">Convener</div>
+        </div>
+        <div class="image-box">
+            <img src="FC.png" alt="Faculty Coordinator">
+            <div class="name">Mr. S. Alwyn Rajiv</div>
+            <div class="designation">Faculty Coordinator</div>
+        </div>
+    </div>
+    
+    <div class="header">Student Members</div>
+    <div class="container">
+        <div class="image-box">
+            <img src="image3.jpg" alt="Student 1">
+            <div class="name">Michael Brown</div>
+            <div class="designation">Data Analyst</div>
+        </div>
+        <div class="image-box">
+            <img src="image4.jpg" alt="Student 2">
+            <div class="name">Emily Johnson</div>
+            <div class="designation">UX Designer</div>
+        </div>
+        <div class="image-box">
+            <img src="image5.jpg" alt="Student 3">
+            <div class="name">Robert Wilson</div>
+            <div class="designation">Marketing Head</div>
+        </div>
+        <div class="image-box">
+            <img src="image6.jpg" alt="Student 4">
+            <div class="name">Laura Adams</div>
+            <div class="designation">HR Manager</div>
+        </div>
+    </div>
+</body>
+</html>
