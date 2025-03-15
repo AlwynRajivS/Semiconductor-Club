@@ -19,30 +19,36 @@ no<!DOCTYPE html>
         }
 
         .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             padding: 20px;
+            background: rgb(44, 44, 44);
             text-align: center;
+            
         }
 
         header {
+            position: absolute;
+            top: 10px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            position: absolute;
-            width: 100%;
-            top: 10px;
             z-index: 100;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: bold;
             color: white;
         }
 
         .menu-toggle {
             display: none;
-            font-size: 26px;
+            font-size: 24px;
             color: white;
             cursor: pointer;
         }
@@ -53,7 +59,7 @@ no<!DOCTYPE html>
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
 
         nav ul li a {
@@ -68,17 +74,19 @@ no<!DOCTYPE html>
         }
 
         .scrolling-message {
-            margin-top: 70px;
+            width: 100%;
+            overflow: hidden;
             color: #ffcc00;
             font-size: 16px;
-            padding: 10px 0;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 25px;
             white-space: nowrap;
-            overflow: hidden;
         }
 
         .container {
             padding: 20px;
-            margin-top: 50px;
+            margin-top: 0px;
         }
 
         .section {
@@ -86,21 +94,21 @@ no<!DOCTYPE html>
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
-            text-align: left;
+            text-align: justify;
         }
 
         .section img {
-            width: 45%;
-            height: auto;
+            width: 50%;
+            height: 50%;
             border-radius: 10px;
         }
 
         .section .text {
-            width: 50%;
+            width: 48%;
         }
 
         .vision-mission {
@@ -115,15 +123,19 @@ no<!DOCTYPE html>
             padding: 20px;
             border-radius: 10px;
             width: 48%;
-            text-align: center;
+            text-align: Justify;
+            height: 100%;
         }
-
+        p { font-size: 16px; color: white; line-height:2.5}
+        .hightlight-text {
+            color: rgb(69, 194, 243);
+             }
         .vision-mission img {
             width: 100%;
-            height: auto;
+            height: 50%;
             border-radius: 10px;
         }
-
+        h2 { font-size: 24px; color: #7bdcfa; line-height: 2.5}
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -133,9 +145,8 @@ no<!DOCTYPE html>
                 flex-direction: column;
                 position: absolute;
                 top: 50px;
-                right: 10px;
+                right: 10px;
                 background: rgba(0, 0, 0, 0.8);
-                text-align: center;
                 padding : 10px;
                 border-radius:5px;
             }
@@ -151,7 +162,9 @@ no<!DOCTYPE html>
                 margin-bottom: 10px;
             }
             .section .text {
-                width: 100%;
+                width: 80%;
+                text-align: center;
+
             }
             .vision-mission {
                 flex-direction: column;
@@ -159,6 +172,7 @@ no<!DOCTYPE html>
             .vision-mission .box {
                 width: 100%;
             }
+            
         }
     </style>
 </head>
@@ -170,7 +184,7 @@ no<!DOCTYPE html>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Activity</a></li>
+                    <li><a href="Activity.html">Activity</a></li>
                     <li><a href="#">Achievement</a></li>
                     <li><a href="#">Team</a></li>
                 </ul>
@@ -184,19 +198,37 @@ no<!DOCTYPE html>
                 <img src="Intro.jpg" alt="Introduction">
                 <div class="text">
                     <h2>Purpose</h2>
-                    <p>Our club enhances knowledge in the <b>semiconductor domain</b> through activities like talks, webinars, and workshops.</p>
+                    <p>Our club is dedicated to enhancing knowledge and expertise in the 
+                        semiconductor domain through various engaging activities, including <b class="hightlight-text">invited talks, 
+                        webinars, demo sessions, problem-solving events, workshops, and hands-on training</b>. 
+                        This initiative is closely aligned with the<b class="hightlight-text"> "India Semiconductor Mission" vision</b>, 
+                        contributing to the nation's goal of becoming a global hub for semiconductor design and manufacturing.</p>
                 </div>
             </div>
             <div class="vision-mission">
                 <div class="box" style="order: 2;">
-                    <img src="Vision.jpg" alt="Vision">
-                    <h2>Vision</h2>
-                    <p>To nurture industry-ready professionals and contribute to semiconductor innovations.</p>
-                </div>
-                <div class="box" style="order: 1;">
                     <img src="Mission.jpg" alt="Mission">
                     <h2>Mission</h2>
-                    <p>We promote industry-academia collaboration and encourage innovation in semiconductor technologies.</p>
+                    <p> <b class="hightlight-text"> Promote Industry-Academia Collaboration:</b>
+                         Organize webinars, workshops, and hands-on sessions with industry experts and academic 
+                         leaders to bridge the gap between theoretical knowledge and industry practices.
+                    </p>
+                    <p><b class="hightlight-text">Foster Innovation and Research:</b> Encourage students to work on real-time projects, 
+                        participate in technical competitions, and develop problem-solving skills in the semiconductor domain.
+                    </p>
+                    <p><b class="hightlight-text">Empower with Practical Skills: </b>Provide technical training, certifications, 
+                        and exposure to advanced semiconductor technologies, aligning with the "India Semiconductor Mission" 
+                        to contribute to national technological advancement. 
+                    </p>
+                </div>
+                <div class="box" style="order: 1;">
+                    <img src="Vision.jpg" alt="Mission">
+                    <h2>Vision</h2>
+                    <p>To nurture a community of innovators and industry-ready professionals by 
+                        fostering in-depth knowledge and hands-on expertise in the semiconductor domain,
+                         empowering students to contribute to cutting-edge advancements in technology, research, 
+                         and development, while aligning with the national vision of the <b class="hightlight-text"> "India Semiconductor 
+                            Mission"</b>.</p>
                 </div>
             </div>
         </div>
