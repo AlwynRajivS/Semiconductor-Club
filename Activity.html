@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Club Activities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #3f4c4e;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .header h1 {
+            font-size: 22px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .activity {
+            background: rgb(213, 215, 216);
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .activity:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .activity:hover img {
+            transform: scale(1.1);
+        }
+
+        .activity h3 {
+            color: #0073e6;
+            margin-top: 10px;
+        }
+
+        .activity p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>KCET-Semiconductor Club</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
+                <li><a href="#">Achievement</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Semiconductor Club Activities</h1>
+    <p>"Where Learning Meets Semiconductor Innovation!"</p>
+
+    <div class="activities">
+        <div class="activity" onclick="location.href='invitedtalks.html'">
+            <img src="Invitedtalks.jpg" alt="Invited Talks">
+            <h3>Invited Talks</h3>
+            <p>Student Members hear from experts in the field.</p>
+        </div>
+        <div class="activity" onclick="location.href='webinar.html'">
+            <img src="Webinar.jpg" alt="Webinars">
+            <h3>Webinars</h3>
+            <p>Student Members learn about the latest developments in the field.</p>
+        </div>
+        <div class="activity" onclick="location.href='demo.html'">
+            <img src="Demo.jpg" alt="Demo Sessions">
+            <h3>Demo Sessions</h3>
+            <p>Student Members learn how to use the latest tools and technologies.</p>
+        </div>
+        <div class="activity" onclick="location.href='problem.html'">
+            <img src="Problem.jpg" alt="Problem Solving">
+            <h3>Problem Solving</h3>
+            <p>Student Members work together to solve problems.</p>
+        </div>
+        <div class="activity" onclick="location.href='handson.html'">
+            <img src="handson.jpg" alt="Hands-on Sessions">
+            <h3>Hands-on Sessions</h3>
+            <p>Student Members get practical experience with the latest tools and technologies.</p>
+        </div>
+    </div>
+</body>
+</html>
