@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KCET-Semiconductor Club - About Us</title>
+    <title>KCET-Semiconductor Club - Activity</title>
     <style>
         * {
             margin: 0;
@@ -218,64 +218,48 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="logo">KCET-Semiconductor Club</h1>
-        <div class="menu-toggle">☰</div>
-        <nav>
+    <header class="header">
+        <h1>KCET-Semiconductor Club</h1>
+        <nav class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Activity.html">Activity</a></li>
+                <li><a href="About_Us.html">About Us</a></li>
                 <li><a href="#">Achievement</a></li>
                 <li><a href="#">Team</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="scrolling-message">
-        <marquee>Welcome to KCET Semiconductor Club! Stay tuned for upcoming events and innovations.</marquee>
-    </div>
+    <h1>Semiconductor Club Activities</h1>
+    <p>"Where Learning Meets Semiconductor Innovation!"</p>
 
-    <div class="container">
-        <div class="section">
-            <img src="Intro.jpg" alt="Introduction">
-            <div class="text">
-                <h2>Purpose</h2>
-                <p>Our club is dedicated to enhancing knowledge and expertise in the 
-                    semiconductor domain through various engaging activities, including 
-                    <b class="highlight-text">invited talks, webinars, workshops, and hands-on training</b>. 
-                    This initiative aligns with the <b class="highlight-text">"India Semiconductor Mission"</b>.
-                </p>
-            </div>
+    <div class="activities">
+        <div class="activity" onclick="location.href='invitedtalks.html'">
+            <img src="Invitedtalks.jpg" alt="Invited Talks">
+            <h3>Invited Talks</h3>
+            <p>Student Members hear from experts in the field.</p>
         </div>
-
-        <div class="vision-mission">
-            <div class="box" style="order: 2;">
-                <img src="Mission.jpg" alt="Mission">
-                <h2>Mission</h2>
-                <p> <b class="hightlight-text"> Promote Industry-Academia Collaboration:</b>
-                     Organize webinars, workshops, and hands-on sessions with industry experts and academic 
-                     leaders to bridge the gap between theoretical knowledge and industry practices.
-                </p>
-                <p><b class="hightlight-text">Foster Innovation and Research:</b> Encourage students to work on real-time projects, 
-                    participate in technical competitions, and develop problem-solving skills in the semiconductor domain.
-                </p>
-                <p><b class="hightlight-text">Empower with Practical Skills: </b>Provide technical training, certifications, 
-                    and exposure to advanced semiconductor technologies, aligning with the "India Semiconductor Mission" 
-                    to contribute to national technological advancement. 
-                </p>
-            </div>
-            <div class="box" style="order: 1;">
-                <img src="Vision.jpg" alt="Mission">
-                <h2>Vision</h2>
-                <p>To nurture a community of innovators and industry-ready professionals by 
-                    fostering in-depth knowledge and hands-on expertise in the semiconductor domain,
-                     empowering students to contribute to cutting-edge advancements in technology, research, 
-                     and development, while aligning with the national vision of the <b class="hightlight-text"> "India Semiconductor 
-                        Mission"</b>.</p>
-            </div>
+        <div class="activity" onclick="location.href='webinar.html'">
+            <img src="Webinar.jpg" alt="Webinars">
+            <h3>Webinars</h3>
+            <p>Student Members learn about the latest developments in the field.</p>
+        </div>
+        <div class="activity" onclick="location.href='demo.html'">
+            <img src="Demo.jpg" alt="Demo Sessions">
+            <h3>Demo Sessions</h3>
+            <p>Student Members learn how to use the latest tools and technologies.</p>
+        </div>
+        <div class="activity" onclick="location.href='problem.html'">
+            <img src="Problem.jpg" alt="Problem Solving">
+            <h3>Problem Solving</h3>
+            <p>Student Members work together to solve problems.</p>
+        </div>
+        <div class="activity" onclick="location.href='handson.html'">
+            <img src="handson.jpg" alt="Hands-on Sessions">
+            <h3>Hands-on Sessions</h3>
+            <p>Student Members get practical experience with the latest tools and technologies.</p>
         </div>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const menuToggle = document.querySelector(".menu-toggle");
